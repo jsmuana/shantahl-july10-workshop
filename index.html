@@ -1,0 +1,3275 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>July 10 Online Business Workshop — Shantahl Direct Sales Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================
+   CSS VARIABLES — NEW GREEN PALETTE
+   ============================================ */
+:root {
+  --deep-forest:    #022D12;
+  --dark-emerald:   #03441E;
+  --rich-emerald:   #026031;
+  --bright-emerald: #027945;
+  --neon-green:     #01AF74;
+  --muted-sage:     #6B9179;
+  --light-sage:     #80A38A;
+  --lime-highlight: #B1D370;
+  --soft-white:     #E1EEE7;
+  --pure-white:     #FFFFFF;
+  --gold:           #C49F5A;
+  --champagne:      #DBB084;
+  --muted-gold:     #907749;
+  --charcoal:       #101214;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--deep-forest);
+  color: var(--soft-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--pure-white);
+}
+
+/* ============================================
+   STICKY HEADER
+   ============================================ */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(2,45,18,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(1,175,116,0.12);
+  transition: background 0.3s;
+}
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.header-logo img {
+  display: block;
+  width: auto;
+  height: 25px;
+  max-width: 150px;
+  object-fit: contain;
+}
+.header-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.055);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.header-nav a {
+  position: relative;
+  padding: 7px 10px;
+  color: rgba(255,255,255,0.78);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.header-nav a:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 11px;
+  transform: translateY(-50%);
+  background: rgba(196,159,90,0.42);
+}
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--pure-white);
+  background: rgba(1,175,116,0.12);
+  border-radius: 20px;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.menu-toggle {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: var(--pure-white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.menu-toggle i { font-size: 20px; }
+.mobile-nav {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 12px;
+  right: 12px;
+  display: none;
+  padding: 10px;
+  border: 1px solid rgba(196,159,90,0.28);
+  border-radius: 14px;
+  background: rgba(2,45,18,0.98);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+}
+.mobile-nav.open {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.mobile-nav a {
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: var(--soft-white);
+  font-size: 11px;
+  text-decoration: none;
+}
+.mobile-nav a:hover { background: rgba(1,175,116,0.13); color: var(--pure-white); }
+.header-cta {
+  background: var(--gold);
+  color: var(--charcoal);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.18s;
+}
+.header-cta:hover { background: var(--champagne); }
+
+section[id] { scroll-margin-top: 82px; }
+
+/* ============================================
+   SHARED UTILS
+   ============================================ */
+.section-wrap { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+.section-wrap-full { padding: 80px 0; }
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--lime-highlight);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.eyebrow::before, .eyebrow::after {
+  content: '';
+  display: block;
+  height: 0.5px;
+  width: 40px;
+  background: var(--neon-green);
+  opacity: 0.45;
+}
+
+.section-headline {
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 900;
+  color: var(--pure-white);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.section-headline em {
+  font-style: normal;
+  color: var(--neon-green);
+}
+.section-sub {
+  font-size: 14px;
+  color: var(--muted-sage);
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+.gold-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0;
+  opacity: 0.3;
+}
+
+/* GOLD TOP BORDER — brand signature */
+.gold-top::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: var(--gold);
+  z-index: 5;
+}
+
+/* ============================================
+   01. HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  background: var(--deep-forest);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Radial glow background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(1,175,116,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--lime-highlight);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  display: block;
+  height: 0.5px;
+  width: 36px;
+  background: var(--neon-green);
+  opacity: 0.5;
+}
+
+.hero-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(1,175,116,0.12);
+  border: 1px solid rgba(1,175,116,0.3);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--neon-green);
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5.5vw, 58px);
+  font-weight: 900;
+  color: var(--pure-white);
+  line-height: 1.1;
+  max-width: 820px;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.hero h1 span { color: var(--neon-green); }
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--muted-sage);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+/* HERO BADGES */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(2,96,49,0.3);
+  border: 0.5px solid rgba(1,175,116,0.35);
+  border-radius: 50px;
+  padding: 5px 13px;
+  font-size: 11px;
+  color: var(--soft-white);
+  font-weight: 600;
+}
+
+/* HERO CTA */
+.hero-cta-wrap {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--charcoal);
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.18s, transform 0.15s;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--champagne); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--soft-white);
+  border: 1px solid rgba(1,175,116,0.35);
+  border-radius: 50px;
+  padding: 13px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.18s;
+  text-decoration: none;
+}
+.btn-secondary:hover { border-color: var(--neon-green); color: var(--neon-green); }
+
+.hero-note {
+  font-size: 11px;
+  color: var(--muted-sage);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* COUNTDOWN TIMER */
+.countdown-wrap {
+  margin-top: 8px;
+}
+.countdown-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--muted-sage);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.countdown {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.count-box {
+  background: rgba(3,68,30,0.6);
+  border: 1px solid rgba(1,175,116,0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  min-width: 68px;
+}
+.count-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--pure-white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  display: block;
+}
+.count-lbl {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+.count-sep {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--muted-sage);
+  align-self: center;
+  margin-bottom: 12px;
+}
+
+/* SOCIAL PROOF */
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px;
+}
+.avatar-stack { display: flex; }
+.avatar-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--deep-forest);
+  margin-left: -8px;
+  overflow: hidden;
+  position: relative;
+  background: var(--rich-emerald);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+  transition: transform 0.2s, z-index 0.2s;
+}
+.avatar-item:first-child { margin-left: 0; }
+.avatar-item:hover {
+  transform: translateY(-3px) scale(1.08);
+  z-index: 5;
+}
+.avatar-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.proof-text {
+  font-size: 12px;
+  color: var(--soft-white);
+}
+.proof-text strong { color: var(--lime-highlight); }
+.stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+
+/* SLOT BAR */
+.slot-bar-wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 24px auto 0;
+}
+.slot-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.slot-label {
+  font-size: 12px;
+  color: var(--soft-white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.slot-label .fire { color: var(--neon-green); }
+.slot-pct { font-size: 11px; color: var(--muted-sage); }
+.slot-track {
+  width: 100%;
+  height: 6px;
+  background: var(--rich-emerald);
+  border-radius: 3px;
+}
+.slot-fill {
+  height: 100%;
+  width: 72%;
+  background: linear-gradient(90deg, var(--neon-green), var(--lime-highlight));
+  border-radius: 3px;
+}
+.slot-note {
+  font-size: 10px;
+  color: var(--muted-sage);
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* ============================================
+   02. PAIN SECTION
+   ============================================ */
+.pain-section {
+  background: var(--dark-emerald);
+  border-top: 1px solid rgba(1,175,116,0.1);
+  border-bottom: 1px solid rgba(1,175,116,0.1);
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 40px;
+}
+.pain-card {
+  background: var(--deep-forest);
+  border: 1px solid rgba(1,175,116,0.15);
+  border-radius: 12px;
+  padding: 20px 20px 20px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.pain-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rich-emerald), var(--neon-green), var(--rich-emerald));
+  opacity: 0.5;
+}
+.pain-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(1,175,116,0.1);
+  border: 1px solid rgba(1,175,116,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: var(--neon-green);
+}
+.pain-text {
+  font-size: 13px;
+  color: var(--soft-white);
+  line-height: 1.6;
+}
+
+.bridge-box {
+  background: rgba(1,175,116,0.06);
+  border: 1px solid rgba(1,175,116,0.2);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 32px;
+  text-align: center;
+}
+.bridge-box p {
+  font-size: 14px;
+  color: var(--soft-white);
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0 auto;
+}
+.bridge-box strong { color: var(--lime-highlight); }
+
+/* ============================================
+   03. EVENT PROMISE
+   ============================================ */
+.promise-section { background: var(--deep-forest); }
+.promise-quote {
+  background: var(--dark-emerald);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  padding: 28px 32px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+.promise-quote p {
+  font-size: 16px;
+  color: var(--pure-white);
+  line-height: 1.75;
+  font-style: italic;
+}
+.promise-quote strong { color: var(--lime-highlight); font-style: normal; }
+
+/* ============================================
+   04. WORKSHOP MODULES
+   ============================================ */
+.modules-section { background: var(--dark-emerald); }
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.module-card {
+  background: var(--deep-forest);
+  border: 1px solid rgba(1,175,116,0.15);
+  border-radius: 12px;
+  padding: 20px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.module-card:hover { border-color: var(--neon-green); }
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+}
+.module-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--rich-emerald);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.module-icon {
+  font-size: 22px;
+  color: var(--neon-green);
+  margin-bottom: 10px;
+}
+.module-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pure-white);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.module-desc {
+  font-size: 11px;
+  color: var(--muted-sage);
+  line-height: 1.55;
+}
+
+/* ============================================
+   05. MID CTA
+   ============================================ */
+.mid-cta {
+  background: var(--rich-emerald);
+  padding: 48px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(1,175,116,0.2);
+  border-bottom: 1px solid rgba(1,175,116,0.2);
+}
+.mid-cta h2 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.mid-cta p {
+  font-size: 13px;
+  color: var(--soft-white);
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+/* ============================================
+   06. WHO IS THIS FOR
+   ============================================ */
+.for-section { background: var(--deep-forest); }
+.for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.for-card {
+  background: var(--dark-emerald);
+  border-radius: 14px;
+  padding: 28px 24px;
+  border: 1px solid rgba(1,175,116,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.for-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+}
+.for-card.is-for::before { background: var(--neon-green); }
+.for-card.not-for::before { background: #E24B4A; }
+
+.for-card-label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+.for-card.is-for .for-card-label { color: var(--neon-green); }
+.for-card.not-for .for-card-label { color: #E24B4A; }
+
+.for-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.for-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--soft-white);
+  line-height: 1.5;
+}
+.for-list li .check { color: var(--neon-green); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+.for-list li .cross { color: #E24B4A; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+/* ============================================
+   07. CHAIRMAN LOWELL AUTHORITY SECTION
+   ============================================ */
+.chairman-section {
+  background: var(--dark-emerald);
+  border-top: 1px solid rgba(1,175,116,0.1);
+}
+.chairman-card {
+  background: var(--deep-forest);
+  border-radius: 16px;
+  border: 1px solid rgba(196,159,90,0.2);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 380px;
+  position: relative;
+}
+.chairman-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: var(--gold);
+  z-index: 5;
+}
+.chairman-left {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chairman-hosted {
+  font-size: 11px;
+  color: var(--muted-sage);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.chairman-hosted span { color: var(--neon-green); }
+.chairman-title-main {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  color: var(--pure-white);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.chairman-title-accent {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.chairman-bio {
+  font-size: 13px;
+  color: var(--soft-white);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.chairman-bio strong { color: var(--pure-white); opacity: 1; }
+
+.chairman-mission {
+  background: rgba(2,96,49,0.3);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+}
+.chairman-mission-label {
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 5px;
+}
+.chairman-mission-text {
+  font-size: 13px;
+  color: var(--soft-white);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.chairman-name { font-size: 17px; font-weight: 800; color: var(--pure-white); }
+.chairman-role { font-size: 11px; color: var(--neon-green); margin-top: 2px; }
+.chairman-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.ch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(1,175,116,0.08);
+  border: 0.5px solid rgba(1,175,116,0.25);
+  border-radius: 50px;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: var(--neon-green);
+}
+
+.chairman-right {
+  background: var(--rich-emerald);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 320px;
+}
+.chairman-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at top, rgba(1,175,116,0.25) 0%, transparent 70%);
+  z-index: 1;
+}
+.chairman-photo-ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11px;
+  color: rgba(225,238,231,0.3);
+  z-index: 2;
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+.chairman-photo-ph i { font-size: 52px; color: rgba(1,175,116,0.2); }
+.chairman-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.chairman-signature {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(225,238,231,0.7);
+  z-index: 3;
+}
+
+/* ============================================
+   08. MENTOR GRID
+   ============================================ */
+.mentors-section { background: var(--deep-forest); }
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.mentor-card {
+  background: var(--dark-emerald);
+  border-radius: 14px;
+  border: 1px solid var(--rich-emerald);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.mentor-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: var(--gold);
+  z-index: 5;
+}
+.mentor-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  box-shadow: inset 0 0 50px rgba(1,175,116,0.06);
+  pointer-events: none;
+  z-index: 4;
+}
+.mentor-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+  background: var(--deep-forest);
+}
+.mentor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.mentor-photo img.rey-photo,
+.mentor-photo img.romel-photo {
+  position: absolute;
+  left: -6%;
+  width: 112%;
+  height: 112%;
+  max-width: none;
+  object-fit: cover;
+  object-position: top center;
+}
+.mentor-photo img.rey-photo {
+  top: -4%;
+}
+.mentor-photo img.romel-photo {
+  top: -7%;
+}
+.photo-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(2,45,18,0.18);
+  z-index: 1;
+}
+.photo-fade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to top, var(--dark-emerald) 0%, transparent 100%);
+  z-index: 2;
+}
+.glow-spot {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(1,175,116,0.25) 0%, transparent 70%);
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+.mentor-role-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 3;
+  background: rgba(2,45,18,0.92);
+  border: 0.5px solid var(--neon-green);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: var(--neon-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+.mentor-body {
+  padding: 18px 18px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+.mentor-speaker-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.mentor-speaker-tag span { color: var(--lime-highlight); }
+.mentor-name {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--pure-white);
+  line-height: 1.15;
+  font-family: 'Montserrat', sans-serif;
+}
+.mentor-title {
+  font-size: 11px;
+  color: var(--neon-green);
+  font-weight: 600;
+  opacity: 0.9;
+}
+.mentor-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.mentor-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 11.5px;
+  color: var(--soft-white);
+  line-height: 1.45;
+  opacity: 0.85;
+}
+.mentor-bullet::before {
+  content: '•';
+  color: var(--neon-green);
+  flex-shrink: 0;
+  margin-top: 0px;
+}
+.mentor-divider {
+  height: 0.5px;
+  background: var(--rich-emerald);
+  margin: 4px -18px;
+}
+.mentor-role-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+}
+/* ============================================
+   09. AGENDA
+   ============================================ */
+.agenda-section { background: var(--dark-emerald); }
+.agenda-viewport {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.agenda-list {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.agenda-list::before {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--rich-emerald), transparent);
+}
+.agenda-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 0;
+}
+.agenda-time {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--neon-green);
+  font-family: 'Montserrat', sans-serif;
+  min-width: 52px;
+  text-align: right;
+  padding-top: 2px;
+}
+.agenda-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+.agenda-content {}
+.agenda-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--pure-white);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2px;
+}
+.agenda-desc { font-size: 12px; color: var(--muted-sage); }
+
+/* ============================================
+   10. TESTIMONIALS
+   ============================================ */
+.testi-section { background: var(--deep-forest); }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.testi-card {
+  background: var(--dark-emerald);
+  border-radius: 12px;
+  border: 1px solid rgba(1,175,116,0.12);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.testi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+}
+.testi-stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; margin-bottom: 10px; }
+.testi-quote {
+  font-size: 13px;
+  color: var(--soft-white);
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+.testi-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.testi-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--rich-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--neon-green);
+  flex-shrink: 0;
+  border: 1.5px solid rgba(1,175,116,0.3);
+}
+.testi-name { font-size: 13px; font-weight: 700; color: var(--pure-white); }
+.testi-role { font-size: 11px; color: var(--muted-sage); }
+
+/* ============================================
+   11. GALLERY SLIDER
+   ============================================ */
+.gallery-section {
+  background: var(--deep-forest);
+  padding: 64px 0 40px;
+}
+.gallery-header {
+  padding: 0 24px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.slider-outer {
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slider-outer::-webkit-scrollbar { display: none; }
+.slider-outer:active { cursor: grabbing; }
+.slider-outer::before,
+.slider-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+.slider-outer::before { left: 0; background: linear-gradient(to right, var(--deep-forest), transparent); }
+.slider-outer::after  { right: 0; background: linear-gradient(to left, var(--deep-forest), transparent); }
+.slider-track {
+  display: flex;
+  gap: 12px;
+  padding: 8px 32px 14px;
+}
+.slide-card {
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #0D1F0D;
+  border: 1px solid rgba(1,175,116,0.12);
+  height: 230px;
+  transition: border-color 0.2s;
+}
+.slide-card:hover { border-color: var(--gold); }
+.slide-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.slide-card:hover::before { opacity: 1; }
+.slide-card.large { width: 360px; }
+.slide-card.medium { width: 230px; }
+.slide-card.tall { width: 185px; }
+.slide-ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #1A2E1A;
+}
+.slide-ph i { font-size: 28px; }
+.slide-ph img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+.slide-ph img.contain {
+  object-fit: contain;
+  background: #0D1F0D;
+}
+.slide-ph.has-image {
+  position: relative;
+  cursor: zoom-in;
+}
+.zoom-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--pure-white);
+  background: rgba(2,45,18,0.72);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  z-index: 3;
+  opacity: 0.82;
+  transition: transform 0.2s, opacity 0.2s, background 0.2s;
+  pointer-events: none;
+}
+.zoom-indicator i { font-size: 16px; }
+.slide-ph.has-image:hover .zoom-indicator {
+  transform: translate(-50%, -50%) scale(1.08);
+  opacity: 1;
+  background: rgba(1,175,116,0.88);
+}
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(1,10,4,0.92);
+  backdrop-filter: blur(8px);
+}
+.image-lightbox.open { display: flex; }
+.lightbox-dialog {
+  position: relative;
+  width: min(100%, 1080px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #0D1F0D;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.65);
+}
+.lightbox-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: var(--dark-emerald);
+  color: var(--pure-white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.lightbox-close i { font-size: 21px; }
+.lightbox-caption {
+  margin-top: 12px;
+  color: var(--soft-white);
+  font-size: 12px;
+  text-align: center;
+}
+.slide-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(6,13,6,0.95) 0%, transparent 100%);
+  padding: 26px 12px 10px;
+  z-index: 2;
+  font-size: 10px;
+  color: rgba(225,238,231,0.55);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 0 24px;
+}
+.ctrl-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--dark-emerald);
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--gold);
+  font-size: 16px;
+  transition: background 0.18s;
+}
+.ctrl-btn:hover { background: var(--rich-emerald); }
+.ctrl-dots { display: flex; gap: 6px; }
+.ctrl-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rich-emerald);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.ctrl-dot.active {
+  background: var(--gold);
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* ============================================
+   12. FAQ
+   ============================================ */
+.faq-section { background: var(--dark-emerald); }
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faq-item {
+  background: var(--deep-forest);
+  border: 1px solid rgba(1,175,116,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--soft-white);
+  font-family: 'Montserrat', sans-serif;
+  gap: 12px;
+  user-select: none;
+}
+.faq-q:hover { color: var(--pure-white); }
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--rich-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--neon-green);
+  transition: background 0.2s;
+}
+.faq-a {
+  display: none;
+  padding: 0 20px 18px;
+  font-size: 13px;
+  color: var(--muted-sage);
+  line-height: 1.7;
+  border-top: 1px solid rgba(1,175,116,0.08);
+  padding-top: 14px;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q { color: var(--lime-highlight); }
+.faq-item.open .faq-icon { background: var(--neon-green); color: var(--deep-forest); }
+
+/* ============================================
+   13. FINAL CTA
+   ============================================ */
+.final-cta {
+  background: var(--deep-forest);
+  text-align: center;
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(1,175,116,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 900;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.final-cta h2 em { font-style: normal; color: var(--neon-green); }
+.final-cta p {
+  font-size: 14px;
+  color: var(--muted-sage);
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.registration-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(1,15,6,0.9);
+  backdrop-filter: blur(8px);
+}
+.registration-modal.open { display: flex; }
+.registration-dialog {
+  position: relative;
+  width: min(100%, 720px);
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(196,159,90,0.3);
+  background: var(--deep-forest);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.65);
+}
+.registration-dialog::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+.registration-header {
+  padding: 28px 28px 18px;
+  border-bottom: 1px solid rgba(1,175,116,0.14);
+}
+.registration-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(21px, 4vw, 28px);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.registration-header h3 span { color: var(--neon-green); }
+.registration-header p {
+  color: var(--muted-sage);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.registration-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.24);
+  border-radius: 50%;
+  background: var(--dark-emerald);
+  color: var(--pure-white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.registration-form {
+  padding: 22px 28px 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: left;
+}
+.form-field.full { grid-column: 1 / -1; }
+.form-field label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--soft-white);
+}
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 13px;
+  border: 1px solid rgba(1,175,116,0.28);
+  border-radius: 9px;
+  background: rgba(3,68,30,0.54);
+  color: var(--pure-white);
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+.form-field input::placeholder { color: rgba(225,238,231,0.42); }
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 0 3px rgba(1,175,116,0.12);
+}
+.form-field select option { color: #111; }
+.registration-consent {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--muted-sage);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.registration-consent input { margin-top: 2px; accent-color: var(--neon-green); }
+.registration-submit {
+  grid-column: 1 / -1;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+}
+.registration-status {
+  grid-column: 1 / -1;
+  display: none;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.registration-status.show { display: block; }
+.registration-status.success {
+  color: #C8F7DB;
+  background: rgba(1,175,116,0.14);
+  border: 1px solid rgba(1,175,116,0.34);
+}
+.registration-status.error {
+  color: #FFD6D6;
+  background: rgba(226,75,74,0.13);
+  border: 1px solid rgba(226,75,74,0.34);
+}
+
+/* ============================================
+   14. FOOTER
+   ============================================ */
+footer {
+  background: #010F06;
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(1,175,116,0.1);
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  margin: 0 auto 10px;
+}
+.footer-logo img {
+  width: auto;
+  height: 28px;
+  max-width: 170px;
+  object-fit: contain;
+}
+.footer-tagline {
+  font-size: 12px;
+  color: var(--muted-sage);
+  margin-bottom: 16px;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.05);
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+.footer-socials a i {
+  font-size: 20px;
+  color: #fff;
+}
+.footer-socials a:hover {
+  color: #fff;
+  background: var(--rich-emerald);
+  border-color: var(--neon-green);
+  transform: translateY(-2px);
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.footer-links a {
+  font-size: 12px;
+  color: var(--muted-sage);
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--neon-green); }
+.footer-disclaimer {
+  font-size: 10px;
+  color: var(--rich-emerald);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .mentor-grid { grid-template-columns: 1fr; }
+  .for-grid { grid-template-columns: 1fr; }
+  .chairman-card { grid-template-columns: 1fr; }
+  .chairman-right { min-height: 220px; }
+  .modules-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 28px; }
+  .countdown { gap: 6px; }
+  .count-box { min-width: 56px; padding: 10px 12px; }
+  .count-num { font-size: 22px; }
+}
+/* ============================================
+   MOBILE-FIRST RESPONSIVE ADDITIONS
+   All breakpoints: 375px (iPhone SE), 480px, 768px (tablet), 1024px+
+   ============================================ */
+
+/* BASE MOBILE DEFAULTS (already in <375px) */
+* { -webkit-tap-highlight-color: transparent; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* HEADER */
+.site-header { padding: 12px 16px; }
+.header-logo img { height: 22px; max-width: 132px; }
+.header-cta { padding: 8px 16px; font-size: 12px; }
+
+/* HERO */
+.hero { padding: 100px 16px 60px; }
+.hero h1 { font-size: 26px; letter-spacing: -0.01em; }
+.hero-sub { font-size: 13px; }
+.hero-badges { gap: 6px; }
+.hero-badge { font-size: 10px; padding: 4px 10px; }
+.hero-cta-wrap {
+  width: 100%;
+  max-width: 420px; width: 100%; }
+.btn-primary { width: 100%; justify-content: center; font-size: 14px; padding: 15px 20px; }
+.btn-secondary { width: 100%; justify-content: center; font-size: 12px; }
+.countdown { gap: 6px; }
+.count-box { min-width: 58px; padding: 10px 8px; }
+.count-num { font-size: 22px; }
+.count-lbl { font-size: 8px; }
+.count-sep { font-size: 18px; }
+.hero-social-proof { gap: 8px; }
+.slot-bar-wrap { max-width: 100%; }
+
+/* SECTIONS */
+.section-wrap { padding: 56px 16px; }
+.section-headline { font-size: 22px; }
+.section-sub { font-size: 13px; margin-bottom: 32px; }
+
+/* PAIN GRID */
+.pain-grid { grid-template-columns: 1fr; gap: 10px; }
+.bridge-box { padding: 18px 16px; }
+.bridge-box p { font-size: 13px; }
+
+/* PROMISE */
+.promise-quote { padding: 20px 18px; }
+.promise-quote p { font-size: 14px; }
+
+/* MODULES */
+.modules-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+.module-card { padding: 16px 14px; }
+.module-title { font-size: 12px; }
+.module-desc { font-size: 10px; }
+.module-icon { font-size: 18px; }
+
+/* MID CTA */
+.mid-cta { padding: 36px 16px; }
+.mid-cta h2 { font-size: 20px; }
+.mid-cta .btn-primary { width: 100%; justify-content: center; }
+
+/* FOR SECTION */
+.for-grid { grid-template-columns: 1fr; gap: 12px; }
+.for-card { padding: 22px 18px; }
+.for-list li { font-size: 12px; }
+
+/* CHAIRMAN */
+.chairman-card { grid-template-columns: 1fr; }
+.chairman-left { padding: 28px 20px; }
+.chairman-title-main { font-size: 22px; }
+.chairman-title-accent { font-size: 22px; }
+.chairman-right { min-height: 200px; order: -1; }
+.chairman-photo { min-height: 220px; }
+.chairman-photo-ph i { font-size: 40px; }
+.chairman-mission { padding: 12px 14px; }
+.chairman-mission-text { font-size: 12px; }
+.chairman-bio { font-size: 12px; }
+
+/* MENTOR GRID */
+.mentor-grid { grid-template-columns: 1fr; gap: 14px; }
+.mentor-name { font-size: 17px; }
+.mentor-body { padding: 14px 14px 18px; }
+
+/* AGENDA */
+.agenda-list::before { left: 52px; }
+.agenda-time { font-size: 11px; min-width: 44px; }
+.agenda-title { font-size: 13px; }
+.agenda-desc { font-size: 11px; }
+
+/* TESTIMONIALS */
+.testi-grid { grid-template-columns: 1fr; gap: 12px; }
+
+/* GALLERY */
+.gallery-header { padding: 0 16px; }
+.slide-card.large { width: 280px; }
+.slide-card.medium { width: 200px; }
+.slide-card.tall { width: 160px; }
+.slide-card { height: 200px; }
+
+/* FAQ */
+.faq-list { gap: 8px; }
+.faq-q { font-size: 12px; padding: 14px 16px; }
+.faq-a { font-size: 12px; padding: 0 16px 14px; padding-top: 12px; }
+
+/* FINAL CTA */
+.final-cta { padding: 72px 16px; }
+.final-cta h2 { font-size: 24px; }
+.final-cta .btn-primary { display: inline-flex; width: auto; min-width: 260px; justify-content: center; }
+.registration-form { grid-template-columns: 1fr; padding: 20px 18px 24px; }
+.form-field.full,
+.registration-consent,
+.registration-submit,
+.registration-status { grid-column: 1; }
+.registration-header { padding: 24px 48px 16px 18px; }
+.registration-modal { padding: 8px; }
+.registration-dialog { max-height: 96dvh; border-radius: 14px; }
+.form-field input,
+.form-field select { font-size: 16px; }
+.registration-close { top: 10px; right: 10px; }
+
+/* FOOTER */
+footer { padding: 32px 16px; }
+.footer-links { gap: 14px; }
+
+/* ======== 480px ======== */
+@media (min-width: 480px) {
+  .hero h1 { font-size: 30px; }
+  .modules-grid { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ======== EXTRA-SMALL PHONES ======== */
+@media (max-width: 380px) {
+  .site-header { padding: 10px 12px; }
+  .header-logo img { height: 19px; max-width: 108px; }
+  .header-cta { padding: 8px 11px; font-size: 10px; gap: 4px; }
+  .header-cta i { display: none; }
+  .hero { padding-left: 12px; padding-right: 12px; }
+  .hero h1 { font-size: 23px; }
+  .countdown { gap: 3px; }
+  .count-box { min-width: 52px; padding: 9px 6px; }
+  .count-num { font-size: 19px; }
+  .count-sep { font-size: 14px; }
+  .modules-grid { grid-template-columns: 1fr; }
+  .final-cta .btn-primary { width: 100%; min-width: 0; }
+  .registration-header h3 { font-size: 20px; }
+  .registration-form { gap: 13px; }
+}
+
+/* ======== 640px ======== */
+@media (min-width: 640px) {
+  .pain-grid { grid-template-columns: repeat(2, 1fr); }
+  .for-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 34px; }
+  .count-box { min-width: 72px; padding: 14px 16px; }
+  .count-num { font-size: 28px; }
+}
+
+/* ======== 768px TABLET ======== */
+@media (min-width: 768px) {
+  .site-header { padding: 14px 32px; }
+  .hero { padding: 120px 32px 80px; }
+  .hero h1 { font-size: 42px; }
+  .section-wrap { padding: 72px 32px; }
+  .section-headline { font-size: 32px; }
+  .modules-grid { grid-template-columns: repeat(3, 1fr); }
+  .mentor-grid { grid-template-columns: repeat(2, 1fr); }
+  .chairman-card { grid-template-columns: 1fr 1fr; }
+  .chairman-right { order: 0; min-height: 340px; }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .btn-primary { width: auto; }
+  .btn-secondary { width: auto; }
+  .mid-cta .btn-primary { width: auto; }
+  .registration-modal { padding: 20px; }
+  .registration-dialog { max-height: 92vh; border-radius: 18px; }
+  .registration-form { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 22px 28px 28px; }
+  .form-field.full,
+  .registration-consent,
+  .registration-submit,
+  .registration-status { grid-column: 1 / -1; }
+  .registration-header { padding: 28px 52px 18px 28px; }
+  .form-field input,
+  .form-field select { font-size: 13px; }
+}
+
+/* ======== 1024px DESKTOP ======== */
+@media (min-width: 1024px) {
+  .hero h1 { font-size: 52px; }
+  .section-wrap { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+  .modules-grid { grid-template-columns: repeat(4, 1fr); }
+  .mentor-grid { grid-template-columns: repeat(4, 1fr); }
+  .testi-grid { grid-template-columns: repeat(4, 1fr); }
+  .pain-grid { grid-template-columns: repeat(3, 1fr); }
+  .section-headline { font-size: 38px; }
+
+  /* Keep the chairman feature balanced on wide desktop screens. */
+  .chairman-section .section-wrap { max-width: 1180px; }
+  .chairman-card {
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+    min-height: 0;
+  }
+  .chairman-left { padding: 36px 34px; }
+  .chairman-right {
+    min-height: 0;
+    background: #062F1A;
+  }
+  .chairman-photo-ph {
+    min-height: 100%;
+    background: #062F1A;
+  }
+  .chairman-photo {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: 610px;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 170px minmax(620px, 1fr) 190px;
+    gap: 24px;
+    padding: 12px clamp(24px, 3vw, 56px);
+  }
+  .header-logo {
+    justify-self: start;
+    min-width: 0;
+  }
+  .header-logo img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+  }
+  .header-nav {
+    display: flex;
+    width: 100%;
+    max-width: 760px;
+    justify-self: center;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header-nav a {
+    flex: 0 1 auto;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .header-actions {
+    justify-self: end;
+  }
+  .menu-toggle,
+  .mobile-nav { display: none !important; }
+}
+
+@media (min-width: 1500px) {
+  .site-header {
+    grid-template-columns: 210px minmax(700px, 1fr) 210px;
+    gap: 32px;
+    padding-left: clamp(40px, 4vw, 80px);
+    padding-right: clamp(40px, 4vw, 80px);
+  }
+  .header-nav { max-width: 840px; }
+  .header-nav a { font-size: 11px; padding-left: 13px; padding-right: 13px; }
+}
+
+</style>
+
+<!-- TABLER ICONS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="site-header">
+  <a class="header-logo" href="#home" aria-label="Shantahl home">
+    <img src="https://shantahl.net/assets/icons/shantahl_white.png" alt="Shantahl">
+  </a>
+  <nav class="header-nav" aria-label="Primary navigation">
+    <a href="#home">Home</a>
+    <a href="#about-event">About the Event</a>
+    <a href="#product-launch">Product Launch</a>
+    <a href="#complan-update">Complan Update</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="header-actions">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      <i class="ti ti-menu-2"></i>
+    </button>
+    <a href="#register" class="header-cta">
+      <i class="ti ti-calendar-event"></i> Reserve My Seat
+    </a>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#about-event">About the Event</a>
+    <a href="#product-launch">Product Launch</a>
+    <a href="#complan-update">Complan Update</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- ============================================
+     01. HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">Shantahl Direct Sales Inc. Presents</div>
+
+  <div class="hero-date-badge">
+    <i class="ti ti-calendar"></i> July 10, 2026 &nbsp;·&nbsp;
+    <i class="ti ti-map-pin"></i> Grand Complex Buhangin, Davao City
+  </div>
+
+  <h1>
+    Matuto ng Online Business,<br>
+    <span>eCommerce, at Digital Marketing</span><br>
+    — Sa Iisang Workshop.
+  </h1>
+
+  <p class="hero-sub">
+    Beginner-friendly, face-to-face workshop para sa mga gustong magsimula ng online business nang may tamang system, skills, tools, at mentorship.
+  </p>
+
+  <div class="hero-badges">
+    <span class="hero-badge"><i class="ti ti-users"></i> Face-to-Face</span>
+    <span class="hero-badge"><i class="ti ti-school"></i> Beginner-Friendly</span>
+    <span class="hero-badge"><i class="ti ti-certificate"></i> With Certificate</span>
+    <span class="hero-badge"><i class="ti ti-device-laptop"></i> eCommerce + AI Tools</span>
+    <span class="hero-badge"><i class="ti ti-clock"></i> 3–4 Hours</span>
+  </div>
+
+  <div class="hero-cta-wrap">
+    <a href="#register" class="btn-primary">
+      <i class="ti ti-calendar-plus"></i> Reserve Your Seat Now
+    </a>
+    <a href="#product-launch" class="btn-secondary">
+      <i class="ti ti-arrow-down"></i> See What You'll Learn
+    </a>
+    <span class="hero-note"><i class="ti ti-lock"></i> Iko-contact ka namin para sa confirmation</span>
+  </div>
+
+  <!-- COUNTDOWN TIMER -->
+  <div class="countdown-wrap">
+    <div class="countdown-label">Event starts in</div>
+    <div class="countdown">
+      <div class="count-box">
+        <span class="count-num" id="cd-days">20</span>
+        <span class="count-lbl">Days</span>
+      </div>
+      <span class="count-sep">:</span>
+      <div class="count-box">
+        <span class="count-num" id="cd-hours">00</span>
+        <span class="count-lbl">Hours</span>
+      </div>
+      <span class="count-sep">:</span>
+      <div class="count-box">
+        <span class="count-num" id="cd-mins">00</span>
+        <span class="count-lbl">Mins</span>
+      </div>
+      <span class="count-sep">:</span>
+      <div class="count-box">
+        <span class="count-num" id="cd-secs">00</span>
+        <span class="count-lbl">Secs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROOF -->
+  <div class="hero-social-proof">
+    <div class="avatar-stack">
+      <div class="avatar-item" title="Chester Rosalez">
+        <img src="https://content.pancake.vn/2-2606/2026/6/20/f4d5a720c78b56faae62f21d1aa2c571554354a2.jpg" alt="Chester Rosalez">
+      </div>
+      <div class="avatar-item" title="Limpin">
+        <img src="https://content.pancake.vn/2-2606/2026/6/20/de6fbe098474686c2ed5edb5f2c370a56e011f13.jpg" alt="Limpin">
+      </div>
+      <div class="avatar-item" title="Troy">
+        <img src="https://content.pancake.vn/2-2606/2026/6/20/5b377bb226220f6b947804fab5b1742e6d017986.jpg" alt="Troy">
+      </div>
+      <div class="avatar-item" title="Miah">
+        <img src="https://content.pancake.vn/2-2606/2026/6/20/6d0d025b0b7ac35cead89efafb7ea5f3fa553e25.jpg" alt="Miah">
+      </div>
+      <div class="avatar-item" title="Jed">
+        <img src="https://content.pancake.vn/2-2606/2026/6/20/1c1181547101650f3e33a8728cc00c45c358c2c5.jpg" alt="Jed">
+      </div>
+    </div>
+    <span class="stars">★★★★★</span>
+    <span class="proof-text"><strong>200+</strong> na nakaattend sa past batches</span>
+  </div>
+
+  <!-- SLOT BAR -->
+  <div class="slot-bar-wrap">
+    <div class="slot-row">
+      <span class="slot-label"><span class="fire">🔥</span> Limitado lang ang slots para July 10</span>
+      <span class="slot-pct">72% nakuha na</span>
+    </div>
+    <div class="slot-track"><div class="slot-fill"></div></div>
+    <div class="slot-note">— mabilis mapuno ang bawat batch —</div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- ============================================
+     02. PAIN SECTION
+     ============================================ -->
+<section class="pain-section">
+  <div class="section-wrap">
+    <div class="eyebrow">Sounds familiar?</div>
+    <h2 class="section-headline">Gusto Mo Mag-Online Business,<br>Pero <em>Hindi Mo Alam Saan Magsisimula?</em></h2>
+    <p class="section-sub">Alam mo na gusto mo — ang kulang mo ay system, guidance, tools, at komunidad.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-mood-confuzed"></i></div>
+        <p class="pain-text">May product o business idea ka, pero hindi mo alam paano i-market online.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-message-off"></i></div>
+        <p class="pain-text">Nagpo-post ka, pero kulang ang inquiries at messages na dumarating.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-brand-facebook"></i></div>
+        <p class="pain-text">Gusto mong matuto ng Facebook marketing, pero nalilito ka sa setup at targeting.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-robot"></i></div>
+        <p class="pain-text">Naririnig mo ang AI, chatbot, at automation — pero wala kang clear system.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-compass-off"></i></div>
+        <p class="pain-text">Gusto mong mag-start, pero ayaw mong sumugal nang walang guide o mentor.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><i class="ti ti-clock-pause"></i></div>
+        <p class="pain-text">Feeling mo kailangan mo muna maging expert bago ka makapagsimula.</p>
+      </div>
+    </div>
+
+    <div class="bridge-box">
+      <p>Hindi effort ang problema ng karamihan. Ang kulang ay <strong>system, guidance, tools, at komunidad.</strong> Kaya ginawa ang July 10 workshop — para ipakita ang basic roadmap ng online business sa isang <strong>practical at beginner-friendly na paraan.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     03. EVENT PROMISE
+     ============================================ -->
+<section class="promise-section" id="about-event">
+  <div class="section-wrap">
+    <div class="eyebrow">What this workshop is really about</div>
+    <h2 class="section-headline">Hindi Ito Motivational Talk.<br><em>Ito ay Practical Online Business Starter Workshop.</em></h2>
+
+    <div class="promise-quote">
+      <p>Dito, matututunan mo kung paano nagtatrabaho ang iba't ibang parte ng online business system — mula sa pag-akit ng customers sa pamamagitan ng content, pag-setup ng Facebook assets, pag-identify ng winning ads, paggamit ng AI tools, at pag-build ng follow-up systems sa pamamagitan ng chatbot automation. <strong>By the end of the workshop, mas malinaw na ang picture mo.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     04. WORKSHOP MODULES
+     ============================================ -->
+<section class="modules-section" id="product-launch">
+  <div class="section-wrap">
+    <div class="eyebrow">Your July 10 starter toolkit</div>
+    <h2 class="section-headline">12 Skills at Tools na <em>Matututunan Mo</em></h2>
+    <p class="section-sub">Beginner-friendly walkthrough ng mga tools at skills na ginagamit sa modern eCommerce, online selling, at digital marketing.</p>
+
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-num">01</div>
+        <div class="module-icon"><i class="ti ti-brand-facebook"></i></div>
+        <div class="module-title">Facebook Page + Business Manager Setup</div>
+        <div class="module-desc">Basics ng pag-set up ng iyong online business presence gamit ang Facebook.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">02</div>
+        <div class="module-icon"><i class="ti ti-chart-bar"></i></div>
+        <div class="module-title">Facebook Organic Marketing</div>
+        <div class="module-desc">Paano gumamit ng organic content para mag-attract ng attention at magtayo ng tiwala.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">03</div>
+        <div class="module-icon"><i class="ti ti-palette"></i></div>
+        <div class="module-title">Branding Basics + Canva Design</div>
+        <div class="module-desc">Gawing mas professional ang iyong business sa pamamagitan ng basic branding at Canva.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">04</div>
+        <div class="module-icon"><i class="ti ti-video"></i></div>
+        <div class="module-title">Canva Video Editing para sa Reels</div>
+        <div class="module-desc">Paano gumawa ng short-form videos na sumusuporta sa iyong online marketing.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">05</div>
+        <div class="module-icon"><i class="ti ti-edit"></i></div>
+        <div class="module-title">Content Creation + Caption Writing</div>
+        <div class="module-desc">Gumawa ng scroll-stopping posts na may captions na nagsasalita sa iyong target audience.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">06</div>
+        <div class="module-icon"><i class="ti ti-calendar"></i></div>
+        <div class="module-title">Content Calendar — 30-Day Plan</div>
+        <div class="module-desc">Gumawa ng 30-day content plan para hindi ka mag-post nang random.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">07</div>
+        <div class="module-icon"><i class="ti ti-ad"></i></div>
+        <div class="module-title">Paano Mag-Identify ng Winning Ads</div>
+        <div class="module-desc">Alamin ang basic signs ng ads at creatives na nakaka-capture ng attention.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">08</div>
+        <div class="module-icon"><i class="ti ti-robot"></i></div>
+        <div class="module-title">Paano Gamitin ang ChatGPT para sa Business</div>
+        <div class="module-desc">Gamitin ang AI para sa content ideas, captions, scripts, at customer replies.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">09</div>
+        <div class="module-icon"><i class="ti ti-photo-ai"></i></div>
+        <div class="module-title">AI Image Generation + Application</div>
+        <div class="module-desc">Paano gagamitin ang AI-generated visuals para sa ads, content, at branding.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">10</div>
+        <div class="module-icon"><i class="ti ti-message-chatbot"></i></div>
+        <div class="module-title">Chatbot Automation</div>
+        <div class="module-desc">Gamitin ang automation para sa lead follow-up, FAQs, at customer conversations.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">11</div>
+        <div class="module-icon"><i class="ti ti-users"></i></div>
+        <div class="module-title">Face-to-Face Workshop — 3 to 4 Hours</div>
+        <div class="module-desc">Guided in-person learning session kasama ang mga mentors at iba pang participants.</div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">12</div>
+        <div class="module-icon"><i class="ti ti-certificate"></i></div>
+        <div class="module-title">Certificate of Completion</div>
+        <div class="module-desc">Makatanggap ng certificate bilang patunay ng iyong partisipasyon sa workshop.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<div class="mid-cta">
+  <h2>Limitado ang Slots para July 10</h2>
+  <p>Iko-contact ka ng team namin para sa confirmation pagkatapos mag-register.</p>
+  <a href="#register" class="btn-primary"><i class="ti ti-calendar-plus"></i> Reserve My Seat Now</a>
+</div>
+
+<!-- ============================================
+     05. WHO IS THIS FOR
+     ============================================ -->
+<section class="for-section">
+  <div class="section-wrap">
+    <div class="eyebrow">Is this for you?</div>
+    <h2 class="section-headline">Para Kanino Ang <em>July 10 Workshop?</em></h2>
+    <p class="section-sub">Disenyo para sa mga taong gusto talagang matuto — hindi para sa mga naghahanap ng instant results.</p>
+
+    <div class="for-grid">
+      <div class="for-card is-for">
+        <div class="for-card-label"><i class="ti ti-circle-check"></i> This IS for you if...</div>
+        <ul class="for-list">
+          <li><span class="check"><i class="ti ti-check"></i></span>Gusto mong magsimula ng online business pero kailangan ng direction</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>Employee ka na naghahanap ng extra income path</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>Online seller na gustong mapabuti ang content at marketing</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>Freelancer na gustong matuto ng digital business skills</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>OFW o family member na naghahanap ng guided business system</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>Student o young professional na nag-e-explore ng eCommerce</li>
+          <li><span class="check"><i class="ti ti-check"></i></span>Small business owner na gustong mapabuti ang online presence</li>
+        </ul>
+      </div>
+      <div class="for-card not-for">
+        <div class="for-card-label"><i class="ti ti-circle-x"></i> This is NOT for you if...</div>
+        <ul class="for-list">
+          <li><span class="cross"><i class="ti ti-x"></i></span>Naghahanap ka ng instant guaranteed income</li>
+          <li><span class="cross"><i class="ti ti-x"></i></span>Ayaw mong matuto o kumilos pagkatapos ng event</li>
+          <li><span class="cross"><i class="ti ti-x"></i></span>Hindi ka willing mag-invest ng oras at consistent na effort</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     06. CHAIRMAN LOWELL
+     ============================================ -->
+<section class="chairman-section">
+  <div class="section-wrap">
+    <div class="eyebrow">Meet the main authority</div>
+    <h2 class="section-headline" style="margin-bottom:32px;">Natututo Ka Mula sa <em>Isang Practitioner</em></h2>
+
+    <div class="chairman-card">
+      <div class="chairman-left">
+        <div>
+          <div class="chairman-hosted">
+            <i class="ti ti-crown" style="color:var(--neon-green);"></i>
+            <span>Chairman & Founder</span> · Shantahl Direct Sales Inc.
+          </div>
+          <div class="chairman-title-main">Natututo Ka Mula sa</div>
+          <div class="chairman-title-main">Isang Practitioner,</div>
+          <div class="chairman-title-accent">Hindi sa Isang Theorist.</div>
+
+          <p class="chairman-bio">
+            Si <strong>Chairman Lowell Magdadaro</strong> ay isang kilalang <strong>eCommerce mentor, business consultant, at online marketing strategist</strong> na tumutulong sa mga Pilipinong entrepreneur na maunawaan ang digital business — mula sa Facebook setup hanggang sa online selling at automation.<br><br>
+            Taon-taon niyang ginagamit ang mga tools at strategies na itinuturo niya. <strong>Yun tinuturo niya, gamit din niya.</strong>
+          </p>
+
+          <div class="chairman-mission">
+            <div class="chairman-mission-label"><i class="ti ti-target"></i> His mission</div>
+            <p class="chairman-mission-text">"Help people to start their own eCommerce business, master online marketing, and build a supportive community."</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="chairman-name">Chairman Lowell Magdadaro</div>
+          <div class="chairman-role">Founder & Chairman, Shantahl Direct Sales Inc.</div>
+          <div class="chairman-badges">
+            <span class="ch-badge"><i class="ti ti-star"></i> eCommerce Mentor</span>
+            <span class="ch-badge"><i class="ti ti-chart-line"></i> Online Marketing Strategist</span>
+            <span class="ch-badge"><i class="ti ti-users"></i> Community Builder</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chairman-right">
+        <div class="chairman-photo-ph">
+          <img class="chairman-photo" src="lowell%20.svg" alt="Chairman Lowell Magdadaro">
+        </div>
+        <div class="chairman-signature">Lowell Magdadaro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     07. MENTOR GRID
+     ============================================ -->
+<section class="mentors-section" id="speakers">
+  <div class="section-wrap">
+    <div class="eyebrow">The speakers</div>
+    <h2 class="section-headline">Meet Your <em>Mentors</em> for July 10</h2>
+    <p class="section-sub">Real experience. Real business. Walang theory-only — lahat sila ay gumagamit ng tinuturo nila.</p>
+
+    <div class="mentor-grid">
+
+      <!-- COACH REY -->
+      <div class="mentor-card">
+        <div class="glow-spot"></div>
+        <div class="mentor-photo">
+          <img class="rey-photo" src="rey.svg" alt="Coach Rey Panogalinga" />
+          <div class="photo-tint"></div>
+          <div class="photo-fade"></div>
+          <div class="mentor-role-badge"><i class="ti ti-brain"></i> Business Coach & Mentor</div>
+        </div>
+        <div class="mentor-body">
+          <div class="mentor-speaker-tag">The <span>Speaker:</span> Coach</div>
+          <div class="mentor-name">Coach Rey<br>Panogalinga</div>
+          <div class="mentor-title">Business Coach, Mentor & Leader</div>
+          <div class="mentor-bullets">
+            <div class="mentor-bullet">Business Mindset & Leadership Coach</div>
+            <div class="mentor-bullet">Online Business Action Planning</div>
+            <div class="mentor-bullet">Community-based Mentorship</div>
+            <div class="mentor-bullet">eCommerce & Direct Selling Mentor</div>
+          </div>
+          <div class="mentor-divider"></div>
+          <div class="mentor-role-tag"><i class="ti ti-focus-2"></i> Mindset & Leadership</div>
+        </div>
+      </div>
+
+      <!-- MR. ROMEL -->
+      <div class="mentor-card">
+        <div class="glow-spot"></div>
+        <div class="mentor-photo">
+          <img class="romel-photo" src="romell.svg" alt="Mr. Romel Gomez" />
+          <div class="photo-tint"></div>
+          <div class="photo-fade"></div>
+          <div class="mentor-role-badge"><i class="ti ti-trending-up"></i> Offline to Online Coach</div>
+        </div>
+        <div class="mentor-body">
+          <div class="mentor-speaker-tag">The <span>Speaker:</span> Coach</div>
+          <div class="mentor-name">Mr. Romel<br>Gomez</div>
+          <div class="mentor-title">Executive Director, SDSI · Int'l Dropshipper</div>
+          <div class="mentor-bullets">
+            <div class="mentor-bullet">Executive Director Rank of SDSI</div>
+            <div class="mentor-bullet">International Dropshipper</div>
+            <div class="mentor-bullet">12 Years Network Marketing</div>
+            <div class="mentor-bullet">Offline to Online Business Coach</div>
+          </div>
+          <div class="mentor-divider"></div>
+          <div class="mentor-role-tag"><i class="ti ti-rocket"></i> Transformation Mentor</div>
+        </div>
+      </div>
+
+      <!-- COACH JO -->
+      <div class="mentor-card">
+        <div class="glow-spot"></div>
+        <div class="mentor-photo">
+          <img src="joanes.svg" alt="Coach Jo Joanes Muana" />
+          <div class="photo-tint"></div>
+          <div class="photo-fade"></div>
+          <div class="mentor-role-badge"><i class="ti ti-device-mobile"></i> Facebook Ads & Digital Marketing</div>
+        </div>
+        <div class="mentor-body">
+          <div class="mentor-speaker-tag">The <span>Speaker:</span> Coach</div>
+          <div class="mentor-name">Joanes<br>Muana</div>
+          <div class="mentor-title">FB Ads Specialist · Co-Founder, DropNearn PH</div>
+          <div class="mentor-bullets">
+            <div class="mentor-bullet">Facebook Ads Strategist & Media Buyer</div>
+            <div class="mentor-bullet">Digital Marketing & eCommerce Trainer</div>
+            <div class="mentor-bullet">AI Automation & Chatbot Funnel Builder</div>
+            <div class="mentor-bullet">Branding, Content & Conversion Strategist</div>
+          </div>
+          <div class="mentor-divider"></div>
+          <div class="mentor-role-tag"><i class="ti ti-tool"></i> Digital Tools & Ads Mentor</div>
+        </div>
+      </div>
+
+      <!-- COACH VIN -->
+      <div class="mentor-card">
+        <div class="glow-spot"></div>
+        <div class="mentor-photo">
+          <img src="vin.svg" alt="Coach Vin Evangelista" />
+          <div class="photo-tint"></div>
+          <div class="photo-fade"></div>
+          <div class="mentor-role-badge"><i class="ti ti-device-mobile"></i> Network Marketing & Content Creation</div>
+        </div>
+        <div class="mentor-body">
+          <div class="mentor-speaker-tag">The <span>Speaker:</span> Coach</div>
+          <div class="mentor-name">Vin<br>Evangelista</div>
+          <div class="mentor-title">Network Marketing Professional · Content Creator · Shantahl Consultant</div>
+          <div class="mentor-bullets">
+            <div class="mentor-bullet">Network Marketing Strategy & Team Building Training</div>
+            <div class="mentor-bullet">Multichannel Content Strategy for Modern Brands</div>
+            <div class="mentor-bullet">Brand Ambassador & Consultant (Shantahl)</div>
+            <div class="mentor-bullet">Video Marketing & Social Media Growth Coach</div>
+          </div>
+          <div class="mentor-divider"></div>
+          <div class="mentor-role-tag"><i class="ti ti-tool"></i> Modern MLM & Content Mentor</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     08. AGENDA
+     ============================================ -->
+<section class="agenda-section" id="agenda">
+  <div class="section-wrap">
+    <div class="eyebrow">July 10 schedule</div>
+    <h2 class="section-headline">Workshop <em>Agenda</em></h2>
+    <p class="section-sub">Structured para sa maximum learning sa loob ng 3–4 hours.</p>
+
+    <div class="agenda-viewport" id="agendaViewport">
+      <div class="agenda-list" id="agendaList">
+        <div class="agenda-item">
+          <div class="agenda-time">1:00 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Registration &amp; Welcome</div>
+            <div class="agenda-desc">Check-in, seat confirmation, and event orientation</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">1:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Opening Program &amp; Shantahl Vision</div>
+            <div class="agenda-desc">Introduction to the event purpose and leadership message</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">2:00 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Product Launch &amp; New Product Direction</div>
+            <div class="agenda-desc">Discover the latest product update and its role in the Shantahl roadmap</div>
+          </div>
+        </div>
+        <div class="agenda-item" id="complan-update">
+          <div class="agenda-time">2:45 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Complan Update &amp; Business Alignment</div>
+            <div class="agenda-desc">Understand the updated business direction and how to stay aligned</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">3:15 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Stronger Compliance, Stronger Trust</div>
+            <div class="agenda-desc">Learn why compliance protects the brand, members, and long-term opportunity</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">3:45 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Bigger Opportunities Ahead</div>
+            <div class="agenda-desc">See how product, system, mentorship, and community create growth possibilities</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">4:15 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Offline to Online Mentor Sharing</div>
+            <div class="agenda-desc">Real stories and lessons from leaders and coaches</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">4:40 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Digital Business Support Tools</div>
+            <div class="agenda-desc">Overview of eCommerce, Facebook marketing, AI tools, content, and automation</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">5:10 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Q&amp;A and Registration Assistance</div>
+            <div class="agenda-desc">Open floor for questions and next-step guidance</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">5:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-content">
+            <div class="agenda-title">Closing Message &amp; Community Photo</div>
+            <div class="agenda-desc">Final alignment, reminders, and group photo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     09. TESTIMONIALS
+     ============================================ -->
+<section class="testi-section">
+  <div class="section-wrap">
+    <div class="eyebrow">Real results from real people</div>
+    <h2 class="section-headline">Ano ang Sabi ng <em>Nakaattend Na?</em></h2>
+    <p class="section-sub">Hindi ito scripted. Ito ay real feedback mula sa mga nakaraan nang batches.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Hindi ako marunong mag-online selling, pero pagkatapos ng workshop naiintindihan ko na ang system. Worth it ang oras ko!"</p>
+        <div class="testi-avatar-row">
+          <div class="testi-avatar">MA</div>
+          <div>
+            <div class="testi-name">Maria A.</div>
+            <div class="testi-role">Employee · Davao City</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Yung part ng Facebook setup at ChatGPT — parang bumukas ang utak ko. Hindi ako inakala na ganito pala kadali mag-start."</p>
+        <div class="testi-avatar-row">
+          <div class="testi-avatar">JR</div>
+          <div>
+            <div class="testi-name">Jun R.</div>
+            <div class="testi-role">Online Seller · CDO</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Dati takot akong mag-ads. Ngayon, mas malinaw na ang direction ko. Salamat sa mga mentors — real talk lahat!"</p>
+        <div class="testi-avatar-row">
+          <div class="testi-avatar">SL</div>
+          <div>
+            <div class="testi-name">Sarah L.</div>
+            <div class="testi-role">Freelancer · Manila</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Bilang OFW na gustong magsimula ng negosyo para sa pamilya ko, sobrang helpful ng workshop. Clear na ang susunod kong hakbang."</p>
+        <div class="testi-avatar-row">
+          <div class="testi-avatar">KD</div>
+          <div>
+            <div class="testi-name">Karen D.</div>
+            <div class="testi-role">OFW · Dubai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     10. GALLERY SLIDER
+     ============================================ -->
+<section class="gallery-section">
+  <div class="gallery-header">
+    <div class="eyebrow" style="justify-content:center;">From the room</div>
+    <h2 class="section-headline">Real Moments Mula sa <em>Past Batches</em><br>ng Shantahl Workshop</h2>
+    <p class="section-sub" style="margin-bottom:0;">I-drag o i-swipe para makita ang lahat ng photos.</p>
+  </div>
+
+  <div class="slider-outer" id="sliderOuter">
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide-card medium">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View workshop session photo">
+          <img src="workshop.svg" alt="Shantahl workshop session">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Workshop session</div>
+      </div>
+      <div class="slide-card tall">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View certificate photo">
+          <img class="contain" src="certificate.svg" alt="Shantahl workshop certificate">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Certificate of completion</div>
+      </div>
+      <div class="slide-card large">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View certificate awarding photo">
+          <img src="certificate-awarding.svg" alt="Shantahl certificate awarding">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Certificate awarding</div>
+      </div>
+      <div class="slide-card medium">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View workshop activity photo">
+          <img src="activity.svg" alt="Shantahl workshop activity">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Workshop activity</div>
+      </div>
+      <div class="slide-card large">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View awarding and recognition photo">
+          <img src="awarding.svg" alt="Shantahl awarding and recognition">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Awarding &amp; recognition</div>
+      </div>
+      <div class="slide-card medium">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View speaker moment photo">
+          <img src="speakerview.svg" alt="Shantahl workshop speaker view">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Speaker moment</div>
+      </div>
+      <div class="slide-card medium">
+        <div class="slide-ph has-image" role="button" tabindex="0" aria-label="View workshop selfie moments">
+          <img src="selfiemoments.svg" alt="Shantahl workshop selfie moments">
+          <span class="zoom-indicator" aria-hidden="true"><i class="ti ti-zoom-in"></i></span>
+        </div>
+        <div class="slide-caption"><i class="ti ti-camera" style="font-size:10px;color:var(--neon-green);margin-right:4px;"></i> Selfie moments</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-controls">
+    <button class="ctrl-btn" id="btnLeft" aria-label="Scroll left"><i class="ti ti-chevron-left"></i></button>
+    <div class="ctrl-dots" id="ctrlDots">
+      <div class="ctrl-dot active" data-i="0"></div>
+      <div class="ctrl-dot" data-i="1"></div>
+      <div class="ctrl-dot" data-i="2"></div>
+      <div class="ctrl-dot" data-i="3"></div>
+    </div>
+    <button class="ctrl-btn" id="btnRight" aria-label="Scroll right"><i class="ti ti-chevron-right"></i></button>
+  </div>
+</section>
+
+<div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image viewer">
+      <i class="ti ti-x"></i>
+    </button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ============================================
+     11. FAQ
+     ============================================ -->
+<section class="faq-section" id="faq">
+  <div class="section-wrap">
+    <div class="eyebrow">Still thinking about it?</div>
+    <h2 class="section-headline">Mga Tanong na <em>Madalas Itanong</em></h2>
+    <p class="section-sub">The most honest answers to the most common questions.</p>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Beginner-friendly ba ito?</span>
+          <span class="faq-icon"><i class="ti ti-minus"></i></span>
+        </div>
+        <div class="faq-a">Oo. Ang workshop na ito ay dinisenyo para sa mga beginners at aspiring entrepreneurs na gustong maunawaan ang basics ng online business, eCommerce, Facebook marketing, AI tools, content creation, at automation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Kailangan ba ng experience sa online selling?</span>
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </div>
+        <div class="faq-a">Hindi. Bibigyan ka ng guided overview ng mga tools at systems na ginagamit sa online business. Zero experience is totally okay.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Face-to-face ba ito at saan?</span>
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </div>
+        <div class="faq-a">Oo, face-to-face ang July 10 workshop sa Grand Complex Buhangin, Davao City. 20 slots per batch lang para intimate at focused ang learning experience.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Gaano katagal ang workshop?</span>
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </div>
+        <div class="faq-a">Mga 3 to 4 hours ang workshop, depende sa final agenda at Q&A. Simula 1:00 PM hanggang mga 5:00 PM.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>May certificate ba?</span>
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </div>
+        <div class="faq-a">Oo. Makakatanggap ka ng certificate of completion bilang patunay ng iyong partisipasyon sa workshop.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Guaranteed ba ang kita pagkatapos?</span>
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </div>
+        <div class="faq-a">Hindi. Educational at mentorship-based ang workshop. Ang results ay depende sa action, consistency, skills, execution, at personal na effort mo. Ang tinuturo namin ay ang foundation — ikaw ang magtatayo ng bahay.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     12. FINAL CTA
+     ============================================ -->
+<section class="final-cta" id="register">
+  <div class="eyebrow" style="justify-content:center;margin-bottom:16px;">Ready ka na ba?</div>
+  <h2>Reserve Your Seat for<br><em>July 10 Online Business Workshop</em></h2>
+  <p>Simulan ang iyong online business journey nang may tamang tools, skills, at mentorship system. Limitado lang ang slots — huwag palampasin.</p>
+
+  <a href="#registration" class="btn-primary" data-open-registration style="margin: 0 auto 12px; display:inline-flex;">
+    <i class="ti ti-calendar-plus"></i> Reserve My Seat Now
+  </a>
+  <br>
+  <span class="hero-note" style="justify-content:center;"><i class="ti ti-lock"></i> Walang pressure. Iko-contact ka namin para sa confirmation.</span>
+
+  <!-- Final countdown -->
+  <div class="countdown-wrap" style="margin-top:36px;">
+    <div class="countdown-label">Event starts in</div>
+    <div class="countdown">
+      <div class="count-box"><span class="count-num" id="cd2-days">20</span><span class="count-lbl">Days</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="count-num" id="cd2-hours">00</span><span class="count-lbl">Hours</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="count-num" id="cd2-mins">00</span><span class="count-lbl">Mins</span></div>
+      <span class="count-sep">:</span>
+      <div class="count-box"><span class="count-num" id="cd2-secs">00</span><span class="count-lbl">Secs</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="registration-modal" id="registrationModal" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+  <div class="registration-dialog">
+    <button class="registration-close" id="registrationClose" type="button" aria-label="Close registration form">
+      <i class="ti ti-x"></i>
+    </button>
+    <div class="registration-header">
+      <div class="eyebrow" style="justify-content:flex-start;margin-bottom:10px;">Free registration</div>
+      <h3 id="registrationTitle">Reserve Your Seat for the <span>July 10 Workshop</span></h3>
+      <p>Complete this short form. Your details will be sent directly to the Shantahl registration team for confirmation.</p>
+    </div>
+    <form class="registration-form" id="registrationForm">
+      <div class="form-field">
+        <label for="regFullName">Full Name *</label>
+        <input id="regFullName" name="fullName" type="text" autocomplete="name" placeholder="Juan Dela Cruz" required>
+      </div>
+      <div class="form-field">
+        <label for="regFacebookName">Facebook Name *</label>
+        <input id="regFacebookName" name="facebookName" type="text" placeholder="Name used on Facebook" required>
+      </div>
+      <div class="form-field">
+        <label for="regMobile">Mobile Number *</label>
+        <input id="regMobile" name="mobileNumber" type="tel" inputmode="tel" placeholder="09XXXXXXXXX" required>
+      </div>
+      <div class="form-field">
+        <label for="regLocation">Location *</label>
+        <input id="regLocation" name="location" type="text" placeholder="City / Municipality" required>
+      </div>
+      <div class="form-field">
+        <label for="regSituation">Current Situation *</label>
+        <select id="regSituation" name="currentSituation" required>
+          <option value="" selected disabled>Select one</option>
+          <option>Student</option>
+          <option>Employed</option>
+          <option>Employed and looking for extra income</option>
+          <option>Full-time parent</option>
+          <option>OFW / Has family abroad</option>
+          <option>Freelancer / VA</option>
+          <option>Business owner</option>
+          <option>Fresh start / Not currently working</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="regExperience">Online Business Experience *</label>
+        <select id="regExperience" name="onlineExperience" required>
+          <option value="" selected disabled>Select one</option>
+          <option>Zero experience — starting from scratch</option>
+          <option>Tried before but no results yet</option>
+          <option>Can boost posts but need more guidance</option>
+          <option>Has Facebook Ads knowledge</option>
+          <option>Has an online shop and wants to level up</option>
+        </select>
+      </div>
+      <div class="form-field full">
+        <label for="regChallenge">What is your biggest online-business challenge? *</label>
+        <select id="regChallenge" name="biggestChallenge" required>
+          <option value="" selected disabled>Select one</option>
+          <option>I do not know where to start</option>
+          <option>Finding the right product</option>
+          <option>Not enough marketing knowledge</option>
+          <option>Creating effective content</option>
+          <option>Running Facebook Ads</option>
+          <option>Getting enough sales or leads</option>
+          <option>Following up with customers consistently</option>
+          <option>Using AI and automation tools</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="regInvitedBy">Who invited you? *</label>
+        <input id="regInvitedBy" name="invitedBy" type="text" placeholder="Full name of your inviter" required>
+      </div>
+      <div class="form-field">
+        <label for="regAttendance">Can you attend July 10, 1:00–5:30 PM? *</label>
+        <select id="regAttendance" name="attendanceConfirmation" required>
+          <option value="" selected disabled>Select one</option>
+          <option>Yes, I confirm that I can attend</option>
+          <option>Interested, but I still need confirmation</option>
+        </select>
+      </div>
+      <label class="registration-consent">
+        <input type="checkbox" name="consent" value="Yes" required>
+        <span>I agree to be contacted by the Shantahl team regarding my workshop registration and event confirmation.</span>
+      </label>
+      <button class="btn-primary registration-submit" id="registrationSubmit" type="submit">
+        <i class="ti ti-lock-check"></i> Submit My Registration
+      </button>
+      <div class="registration-status" id="registrationStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://shantahl.net/assets/icons/shantahl_white.png" alt="Shantahl">
+  </div>
+  <p class="footer-tagline">Shantahl Direct Sales Inc. — Empowering Futures, Creating Opportunities</p>
+  <div class="footer-socials" aria-label="Shantahl social media">
+    <a href="#" aria-label="Facebook Page" title="Facebook Page"><i class="ti ti-brand-facebook"></i></a>
+    <a href="#" aria-label="Messenger" title="Messenger"><i class="ti ti-brand-messenger"></i></a>
+    <a href="#" aria-label="TikTok" title="TikTok"><i class="ti ti-brand-tiktok"></i></a>
+  </div>
+  <div class="footer-links">
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </div>
+  <p class="footer-disclaimer">
+    Ang July 10 workshop ay educational at mentorship-based. Walang guaranteed income claims. Results depend on individual action, consistency, and effort. © 2026 Shantahl Direct Sales Inc. All rights reserved.
+  </p>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+/* COUNTDOWN TIMER */
+function updateCountdown() {
+  const eventDate = new Date('2026-07-10T13:00:00+08:00');
+  const now = new Date();
+  const diff = eventDate - now;
+
+  if (diff <= 0) {
+    ['cd-days','cd-hours','cd-mins','cd-secs',
+     'cd2-days','cd2-hours','cd2-mins','cd2-secs'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = '00';
+    });
+    return;
+  }
+
+  const days  = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins  = Math.floor((diff % 3600000) / 60000);
+  const secs  = Math.floor((diff % 60000) / 1000);
+
+  const pad = n => String(n).padStart(2, '0');
+
+  ['cd-days','cd2-days'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = pad(days); });
+  ['cd-hours','cd2-hours'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = pad(hours); });
+  ['cd-mins','cd2-mins'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = pad(mins); });
+  ['cd-secs','cd2-secs'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = pad(secs); });
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* FAQ ACCORDION */
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-icon').innerHTML = '<i class="ti ti-plus"></i>';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    item.querySelector('.faq-icon').innerHTML = '<i class="ti ti-minus"></i>';
+  }
+}
+
+/* GALLERY SLIDER */
+const outer = document.getElementById('sliderOuter');
+const dots  = document.querySelectorAll('.ctrl-dot');
+let isDragging = false, startX = 0, scrollLeft = 0, didDrag = false;
+let galleryAutoTimer = null;
+let galleryRestartTimer = null;
+let galleryLoopWidth = 0;
+let galleryInView = false;
+
+function stopGalleryAutoSlide() {
+  clearInterval(galleryAutoTimer);
+  clearTimeout(galleryRestartTimer);
+  galleryAutoTimer = null;
+  galleryRestartTimer = null;
+}
+
+function startGalleryAutoSlide() {
+  stopGalleryAutoSlide();
+  if (!outer || !galleryInView) return;
+  galleryAutoTimer = setInterval(() => {
+    if (!galleryInView || isDragging || document.hidden) return;
+    outer.scrollLeft += 1;
+    if (galleryLoopWidth && outer.scrollLeft >= galleryLoopWidth) {
+      outer.scrollLeft -= galleryLoopWidth;
+    }
+    updateDots();
+  }, 20);
+}
+
+function restartGalleryAutoSlide() {
+  stopGalleryAutoSlide();
+  if (galleryInView) {
+    galleryRestartTimer = setTimeout(() => startGalleryAutoSlide(), 900);
+  }
+}
+
+if (outer) {
+  const track = document.getElementById('sliderTrack');
+  if (track && !track.dataset.loopReady) {
+    const originalCards = [...track.children];
+    originalCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.querySelector('.slide-ph.has-image')?.setAttribute('tabindex', '-1');
+      track.appendChild(clone);
+    });
+    track.dataset.loopReady = 'true';
+    galleryLoopWidth = track.children[originalCards.length].offsetLeft - track.children[0].offsetLeft;
+  }
+
+  outer.addEventListener('mousedown', e => {
+    stopGalleryAutoSlide();
+    isDragging = true; didDrag = false; startX = e.pageX - outer.offsetLeft; scrollLeft = outer.scrollLeft;
+    outer.style.cursor = 'grabbing';
+  });
+  outer.addEventListener('mouseleave', () => {
+    isDragging = false;
+    outer.style.cursor = 'grab';
+    restartGalleryAutoSlide();
+  });
+  outer.addEventListener('mouseup', () => {
+    isDragging = false;
+    outer.style.cursor = 'grab';
+    restartGalleryAutoSlide();
+  });
+  outer.addEventListener('mousemove',  e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - outer.offsetLeft;
+    if (Math.abs(x - startX) > 6) didDrag = true;
+    outer.scrollLeft = scrollLeft - (x - startX) * 1.2;
+    updateDots();
+  });
+  outer.addEventListener('touchstart', e => {
+    stopGalleryAutoSlide();
+    didDrag = false;
+    startX = e.touches[0].pageX;
+    scrollLeft = outer.scrollLeft;
+  }, { passive: true });
+  outer.addEventListener('touchmove',  e => {
+    const touchX = e.touches[0].pageX;
+    if (Math.abs(touchX - startX) > 6) didDrag = true;
+    outer.scrollLeft = scrollLeft - (touchX - startX);
+    updateDots();
+  }, { passive: true });
+  outer.addEventListener('touchend', restartGalleryAutoSlide, { passive: true });
+
+  document.getElementById('btnLeft').addEventListener('click',  () => {
+    outer.scrollBy({ left: -280, behavior: 'smooth' });
+    setTimeout(updateDots, 350);
+    restartGalleryAutoSlide();
+  });
+  document.getElementById('btnRight').addEventListener('click', () => {
+    outer.scrollBy({ left: 280, behavior: 'smooth' });
+    setTimeout(updateDots, 350);
+    restartGalleryAutoSlide();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const i = parseInt(dot.dataset.i);
+      const max = outer.scrollWidth - outer.clientWidth;
+      outer.scrollTo({ left: (max / (dots.length - 1)) * i, behavior: 'smooth' });
+      setTimeout(updateDots, 350);
+      restartGalleryAutoSlide();
+    });
+  });
+
+  const gallerySection = outer.closest('.gallery-section');
+  function syncGalleryVisibility() {
+    if (!gallerySection) return;
+    const rect = gallerySection.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    if (isVisible === galleryInView) return;
+    galleryInView = isVisible;
+    if (galleryInView) startGalleryAutoSlide();
+    else stopGalleryAutoSlide();
+  }
+  window.addEventListener('scroll', syncGalleryVisibility, { passive: true });
+  window.addEventListener('resize', () => {
+    galleryLoopWidth = track.children[track.children.length / 2].offsetLeft - track.children[0].offsetLeft;
+    syncGalleryVisibility();
+  });
+  syncGalleryVisibility();
+}
+
+function updateDots() {
+  if (!outer) return;
+  const loop = galleryLoopWidth || (outer.scrollWidth - outer.clientWidth);
+  const position = loop > 0 ? outer.scrollLeft % loop : 0;
+  const pct = loop > 0 ? position / loop : 0;
+  const active = Math.round(pct * (dots.length - 1));
+  dots.forEach((d, i) => d.classList.toggle('active', i === active));
+}
+
+/* GALLERY IMAGE LIGHTBOX */
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(photo) {
+  if (!lightbox || !photo || didDrag) {
+    didDrag = false;
+    return;
+  }
+  const image = photo.querySelector('img');
+  if (!image) return;
+  const caption = photo.closest('.slide-card')?.querySelector('.slide-caption')?.textContent.trim() || image.alt;
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+  lightboxCaption.textContent = caption;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  stopGalleryAutoSlide();
+  lightboxClose.focus();
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  lightboxImage.src = '';
+  startGalleryAutoSlide();
+}
+
+document.querySelectorAll('.slide-ph.has-image').forEach(photo => {
+  photo.addEventListener('click', () => openLightbox(photo));
+  photo.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(photo);
+    }
+  });
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lightbox?.classList.contains('open')) closeLightbox();
+});
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopGalleryAutoSlide();
+  else if (!lightbox?.classList.contains('open')) startGalleryAutoSlide();
+});
+
+/* REGISTRATION MODAL + GOOGLE APPS SCRIPT SUBMISSION */
+const REGISTRATION_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzba9E1W6rygso3Ymu9eOf0dZ8OocBTDMeF1eCVWjjCIR_9dUiIPGFYrkjh1e7z4gtO3g/exec';
+const registrationModal = document.getElementById('registrationModal');
+const registrationForm = document.getElementById('registrationForm');
+const registrationClose = document.getElementById('registrationClose');
+const registrationStatus = document.getElementById('registrationStatus');
+const registrationSubmit = document.getElementById('registrationSubmit');
+let registrationLastTrigger = null;
+
+function openRegistrationModal(trigger) {
+  if (!registrationModal) return;
+  registrationLastTrigger = trigger || document.activeElement;
+  registrationModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('regFullName')?.focus(), 50);
+}
+
+function closeRegistrationModal() {
+  if (!registrationModal) return;
+  registrationModal.classList.remove('open');
+  document.body.style.overflow = '';
+  registrationLastTrigger?.focus?.();
+}
+
+document.querySelectorAll('a[href="#register"], [data-open-registration]').forEach(button => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    openRegistrationModal(button);
+  });
+});
+
+registrationClose?.addEventListener('click', closeRegistrationModal);
+registrationModal?.addEventListener('click', event => {
+  if (event.target === registrationModal) closeRegistrationModal();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && registrationModal?.classList.contains('open')) closeRegistrationModal();
+});
+
+registrationForm?.addEventListener('submit', async event => {
+  event.preventDefault();
+  registrationStatus.className = 'registration-status';
+
+  if (REGISTRATION_WEB_APP_URL.includes('PASTE_GOOGLE_APPS_SCRIPT')) {
+    registrationStatus.textContent = 'Registration form is ready. The Google Sheets connection only needs its Apps Script Web App URL.';
+    registrationStatus.classList.add('show', 'error');
+    return;
+  }
+
+  const originalButtonHtml = registrationSubmit.innerHTML;
+  registrationSubmit.disabled = true;
+  registrationSubmit.innerHTML = '<i class="ti ti-loader-2"></i> Submitting...';
+
+  const formData = new FormData(registrationForm);
+  formData.set('mobileNumber', "'" + String(formData.get('mobileNumber') || '').trim());
+  formData.append('submittedAt', new Date().toISOString());
+  formData.append('sourcePage', window.location.href);
+
+  try {
+    await fetch(REGISTRATION_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    });
+
+    registrationStatus.textContent = 'Registered successfully! The Shantahl team will contact you for seat confirmation.';
+    registrationStatus.classList.add('show', 'success');
+    registrationForm.reset();
+  } catch (error) {
+    registrationStatus.textContent = 'We could not submit your registration. Please check your connection and try again.';
+    registrationStatus.classList.add('show', 'error');
+  } finally {
+    registrationSubmit.disabled = false;
+    registrationSubmit.innerHTML = originalButtonHtml;
+  }
+});
+
+/* STICKY HEADER — darken on scroll */
+/* RESPONSIVE HEADER NAVIGATION */
+const menuToggle = document.getElementById('menuToggle');
+const mobileNav = document.getElementById('mobileNav');
+
+function closeMobileNav() {
+  mobileNav?.classList.remove('open');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  if (menuToggle) menuToggle.innerHTML = '<i class="ti ti-menu-2"></i>';
+}
+
+menuToggle?.addEventListener('click', event => {
+  event.stopPropagation();
+  const isOpen = mobileNav?.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  menuToggle.innerHTML = isOpen ? '<i class="ti ti-x"></i>' : '<i class="ti ti-menu-2"></i>';
+});
+
+mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileNav));
+
+document.addEventListener('click', event => {
+  if (!mobileNav?.contains(event.target) && !menuToggle?.contains(event.target)) closeMobileNav();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1200) closeMobileNav();
+});
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (window.scrollY > 60) {
+    header.style.background = 'rgba(2,45,18,0.98)';
+  } else {
+    header.style.background = 'rgba(2,45,18,0.92)';
+  }
+});
+</script>
+
+</body>
+</html>
